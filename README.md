@@ -1,51 +1,173 @@
-## 1. 规范说明  
+## 规范说明  
 
 此为前端开发团队遵循和约定的代码书写规范，意在提高代码的规范性和可维护性。  
 此规范为参考规范，不全是硬性要求，部分硬性约定见下一条[书写规范](#2)，统一团队编码规范和风格。让所有代码都是有规可循的，并且能够得到沉淀，减少重复劳动。  
 
-### 1.1 结构说明  
--- [项目结构](#项目结构)  
-----|---- [CSS文件结构](#css-文件结构)  
-----|---- [JS文件结构](#js-文件结构)  
 
-## 2. 书写规范
+# 项目命名规范
 
-### 2.1 样式与内容分离
 
-#### 2.1.1 项目结构  
+## 1 文件命名规则
+
+
+文件名称统一用小写的英文字母、数字和下划线的组合,其中不得包含汉字、空格和特殊字符；命名原则的指导思想一是使得你自己和工作组的每一个成员能够方便的理解每一个文件的意义,二是当我们在文件夹中使用“按名称排例”的命令时,同一种大类的文件能够排列在一起,以便我们查找、修改、替换等操作。
+
+## 2 项目命名
+
+全部采用小写方式， 以下划线分隔。
+
+例：my_project_name
+
+
+## 3 目录命名
+
+参照项目命名规则,有复数结构时，要采用复数命名法。
+
+例：scripts, styles, images
+
+## 4 HTML 命名
+
+HTML的命名原则引文件统一使用index.htm index.html index.asp文件名(小写)，各子页命名的原则首先应该以栏目名的英语翻译取单一单词为名称。
+
+例如: 关于我们 / aboutus 信息反馈 / feedback 产 品 / product
+
+## 5 CSS 命名
+
+参照项目命名规则；
+
+1. 为JavaScript预留钩子的命名, 请以 js_ 起始, 比如: js_hide, js_show;
+2. class与id命名: 大的框架命名比如header/footer/wrapper/left/right之类的在2中由统一命名.其他样式名称由 小写英文 &; 数字 &; _ 来组合命名, 如i_comment, fontred, width200; 避免使用中文拼音, 尽量使用简易的单词组合; 总之, 命名要语义化, 简明化。
+3. 样式表中中文字体名, 请务必转码成unicode码, 以避免编码错误时乱码;
+4. 样式命名如下：
+	- **头:header**
+	- **内容:content/container**
+	- **尾:footer**
+	- **导航:nav**
+	- **侧栏:sidebar**
+	- **栏目:column**
+	- **页面外围控制整体布局宽度:wrapper**
+	- **左右中:left right center**
+	- **登录条:loginbar**
+	- **标志:logo**
+	- **广告:banner**
+	- **页面主体:main**
+	- **热点:hot**
+	- **新闻:news**
+	- **下载:download**
+	- **子导航:subnav**
+	- **菜单:menu**
+	- **子菜单:submenu**
+	- **搜索:search**
+	- **友情链接:friendlink**
+	- **页脚:footer**
+	- **版权:copyright**
+	- **滚动:scroll**
+	- **内容:content**
+	- **标签页:tab**
+	- **文章列表:list**
+	- **提示信息:msg**
+	- **小技巧:tips**
+	- **栏目标题:title**
+	- **加入:joinus**
+	- **指南:guild**
+	- **服务:service**
+	- **注册:regsiter**
+	- **状态:status**
+	- **投票:vote**
+	- **合作伙伴:partner**
+	- **容器: container**
+	- **页头:header**
+	- **内容:content/container**
+	- **页面主体:main**
+	- **页尾:footer**
+	- **导航:nav**
+	- **侧栏:sidebar**
+	- **栏目:column**
+	- **页面外围控制整体布局宽度:wrapper**
+	- **左右中:left right center**
+	- **主导航:mainbav**
+	- **子导航:subnav**
+	- **顶导航:topnav**
+	- **边导航:sidebar**
+	- **左导航:leftsidebar**
+	- **右导航:rightsidebar**
+	- **菜单:menu**
+	- **子菜单:submenu**
+	- **标题: title**
+	- **摘要: summary**
+	- **标志:logo**
+	- **广告:banner**
+	- **登陆:login**
+	- **登录条:loginbar**
+	- **注册:regsiter**
+	- **搜索:search**
+	- **功能区:shop**
+	- **标题:title**
+	- **加入:joinus**
+	- **状态:status**
+	- **按钮:btn**
+	- **滚动:scroll**
+	- **标签页:tab**
+	- **文章列表:list**
+	- **提示信息:msg**
+	- **当前的: current**
+	- **小技巧:tips**
+	- **图标: icon**
+	- **注释:note**
+	- **指南:guild**
+	- **服务:service**
+	- **热点:hot**
+	- **新闻:news**
+	- **下载:download**
+	- **投票:vote**
+	- **合作伙伴:partner**
+	- **友情链接:link**
+	- **版权:copyright**
+
+
+## 6 JS 命名
+
+参照项目命名规则。
+
+例：about_animate.js
+
+## 7 图片命名
+参照项目命名规则,有复数结构时，要采用复数命名法。
+
+1. 图片的名称分为头尾两部分，用下划线隔开，头部分表示此图片的大类性质，例如：广告、标志、菜单、按钮等等 
+2. 常规命名
+	- 放置在页面顶部的广告、装饰图案等长方形的图片取名：banner
+	- 标志性的图片取名为：logo
+	- 在页面位置不固定并且带有链接的小图片我们取名：button
+	- 在页面上某一个位置连续出现，性质相同的链接栏目的图片我们取名：menu
+	- 装饰用的照片我们取名：pic
+	- 不带链接表示标题的图片我们取名：title
+3. 范例
+	- banner_sohu.gif
+	- banner_sina.gif
+	- menu_aboutus.gif
+	- menu_job.gif
+	- title_news.gif
+	- logo_police.gif
+
+
+# 2 项目结构  
     --- 
      |---- index.html             入口页    
      |---- js/                    JS //具体见JS细化结构                 
      |---- css/                   CSS //具体见CSS细化结构
 
-#### 2.1.2 重构步骤约定
-1. `index.html` 全部样式附着于 `class="xxx"` **注：** _此时文件中不包含任何一个 id="xxx"_
-2. 为上一步书写 CSS style  
-**\[至此重构完成\]**
-3. 开始书写`js`交互文件，使用 `ID` 和 `Class` 定位被操作句柄
-4. 向 `index.html` 中需要的地方添加 `id="xxx"` 及 `data-xxx="xxx"`  
-**\[至此交互效果完成\]**
 
-#### 2.1.3 命名规范  
-* 文件及文件夹: 全部英文小写字母+数字或连接符"`-` , `_` "，不可出现其他字符
-如：`../css/style.css, jquery.1.x.x.js` 
-* 文件：调用 `/libs` 文件需包含版本号，压缩文件需包含`min`关键词，其他插件则可不包含
-如：`/libs/jquery.1.9.1.js` `/libs/modernizr-1.7.min.js` `fileuploader.js` `plugins.js`
-* ID: [匈牙利命名法] & [小駝峰式命名法]  
-如：`firstName` `topBoxList` `footerCopyright`
-* Class: [减号连接符]  
-如：`top-item` `main-box` `box-list-item-1`
-* 尽量使用语义明确的单词命名，避免 `left` `bottom` 等方位性的词语
-
-#### 2.1.4 格式&编码
+## 2.1 格式&编码
 * 文本文件： `.xxx` UTF-8_\(无BOM\)_ 编码
 * 图片文件： `.png` _(PNG-24)_ `.jpg` _(压缩率8-12)_
 * 动态图片： `.gif`
 * 压缩文件： `.tar.gz` `.zip`
 
-### 2.2 CSS 细化规范
 
-#### 2.2.1 CSS 文件结构 
+## 3 CSS 规范
+
+### 3.1 CSS 文件结构
     --- ../css/
      |---- css/libs/reset.css                  CSS reset文件
      |---- … … 
@@ -54,49 +176,9 @@
      |---- … … 
      |---- css/images/xxx/sprite.png           xxx 的 CSS-sprite 图片
      |---- css/xxx-style.css                   xxx 的 样式表
-     
-#### 2.2.2 CSS(含Less) 文件结构  
-    --- ../css/
-     |---- css/libs/reset.less            CSS reset文件
-     |---- css/libs/elements.less         Less 函数复用文件
-     |---- … … 
-     |---- css/images/                         主 CSS-sprite 图片     
-     |---- css/style.less                      主样式Less
-     |---- css/style.css                       less -> css 自动生成
-     |---- … … 
-     |---- css/images/xxx/sprite.png           xxx 的 CSS-sprite 图片
-     |---- css/xxx-style.less                  xxx 的 Less
-     |---- css/xxx-style.css                   less -> css 自动生成
 
-#### 2.2.3 使用Less
-在 `.less`文件头部引入 [reset.less] & [elements.less]，之后调用如下属性传参即可，具体使用说明见 -> [Lesselements] 官方文档   
 
-    @import "libs/reset.less";  
-    @import "libs/elements.less";
-
-    .gradient
-    .bw-gradient
-    .bordered
-    .drop-shadow
-    .rounded
-    .border-radius
-    .opacity
-    .transition-duration
-    .rotation
-    .scale
-    .transition
-    .inner-shadow
-    .box-shadow
-    .columns
-    .translate
-
-#### 2.2.4 CSS reset
-CSS reset 文件使用：[reset.css] 或 [reset.less]   
-
-* reset文件用于重设各个浏览器的默认样式方案，解决其引起的耦合问题。  
-* 也可使用 `.clearfix` 清除浮动
-
-#### 2.2.5 CSS 注释格式约定  
+### 3.2 CSS 注释格式约定  
     /*
     @name: Drop Down Menu
     @description: Style of top bar drop down menu.
@@ -106,134 +188,196 @@ CSS reset 文件使用：[reset.css] 或 [reset.less]
 
 _其中，@require为可选项_ 
 
-* CSS换行制表：使用 2 <del>或4</del> 个空格，而非\[Tab\]
-* 书写格式：
-    * CSS名称+冒号+属性  
-    如：`.box1 {float:left;}`
-    * 建议保留`{`左侧空格，字体名用`\`包含  
-    如：`.box1,.box2,.box3 {font-family:Courier,'Courier New';}`
-    * 避免中文，或使用转义，推荐前者  
-    如：`font-family: "Microsoft YaHei";` `font-family:\5fae\8f6f\96c5\9ed1;`
-        
-#### 2.2.6 CSS各属性的排列顺序：不做硬性要求  
-_如：以下2种顺序均可_
+### 3.3 CSS书写规范
 
-    .box {
-      /* 顺序1 */
-      background: none repeat scroll 0 0 transparent;
-      bottom: 11px;
-      position: relative;
-      width: 22px;
-      z-index: 33;
-    }
-    .box {
-      /* 顺序2 */
-      z-index: 33;
-      width: 22px;
-      bottom: 11px;
-      background: transparent none repeat scroll 0 0 ;
-      position: relative;
-    }
-  
-#### 2.2.7 CSS嵌套规则    
-    /* 推荐嵌套层级 */
-    .ui-icon-rarr{}
-    .ui-icon-larr{}
-    .ui-title{}
-    .ui-nav .ui-list{}
-    .ui-table .ui-list{}
+#### 3.3.1 [强制] 勿格式化，保留下面这种格式，增加可读性和可维护性，后期后台程序(如：PHP/Python)会将CSS压缩成 **一行** 输出：
+.box{
+  /* 勿格式化，增加可读性 */
+  background: none repeat scroll 0 0 transparent;
+  bottom: 11px;
+  position: relative;
+  width: 22px;
+  z-index: 33;
+}
 
-    /* 不推荐 */
-    .ui-icon-rarr{}
-    .ui-icon-larr{}
-    .ui-title{}
-    .ui-list{}
-    .ui-nav{}
+#### 3.3.2 [强制] 使用`@charset "utf-8";`声明css文件页面编码为UTF-8；防止css注释出现乱码
 
-#### 2.2.8 CSS格式化  
-勿格式化，保留下面这种格式，增加可读性和可维护性，后期后台程序(如：PHP/Python)会将CSS压缩成 **一行** 输出：
+#### 3.3.3 [强制] 当数值为 0 - 1 之间的小数时，省略整数部分的 `0`。
 
-    .box{
-      /* 勿格式化，增加可读性 */
-      background: none repeat scroll 0 0 transparent;
-      bottom: 11px;
-      position: relative;
-      width: 22px;
-      z-index: 33;
-    }
-    
-### 2.3 XHTML 细化规范
+示例：
 
-#### 2.3.1 HTML 注释格式约定  
-    <!--
-    @name: Drop Down Menu
-    @description: Style of top bar drop down menu.
-    @author: Andy Huang(andyahung@geekpark.net)
-    -->
-    
-    <div id="header">
-        <div class="xxx">
-            <span>HTML行内注释格式</span>
-        </div>
-    </div><!-- #header end-->
+```css
+/* good */
+panel {
+    opacity: .8
+}
 
-* HTML换行缩进：**采用 2 空格**
+/* bad */
+panel {
+    opacity: 0.8
+}
+```
 
-#### 2.3.2 HTML嵌套规则  
-    /* 推荐嵌套层级 */
-      <ul class="ui-nav">
-        <li class="ui-nav-item"> some text
-          <ul class="ui-nav-item-child">
-            <li> some text
-              <ul class="ui-list">
-                <li class="ui-list-item"> some text</li>
-              </ul
-            ...
-           </ul>
-        </li>
-        <li
-        ...
-      </ul>
+#### 3.3.4 [强制] 长度为 `0` 时须省略单位。 (也只有长度单位可省)
 
-#### 2.3.4 \* 第一行统一使用HTML5标准：<!DOCTYPE html>
-    <!DOCTYPE html>
-    <html dir="ltr" lang="zh-CN">
-    <head>
-      <meta charset="utf-8" />
-      <title>极客公园 | 创新者社区</title>
-      <meta name="keywords" content="xxxx, xxx, xxxxx" />
-      <meta name="description" content="xxxxxxxxxxxxxxxxxxxx" />
-        
+示例：
 
-#### 2.3.5 Meta 的使用：（需要根据具体需求按需选择）可参看：[cool-head]
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta http-equiv="Cache-Control" content="max-age=7200" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="http://feeds.geekpark.net/" />
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    
-    <script type="text/javascript" src="/js/xxx.js"></script>
-    <link rel="stylesheet" href="/css/xxx.css">
-    
-    <script type="text/javascript">
-        //Google 统计代码 的位置在离</head>最近的位置
-    </script>
-  </head>
+```css
+/* good */
+body {
+    padding: 0 5px;
+}
 
-* `<img>`标签默认缺省格式：`<img src="xxx.png" alt="缺省时文字" />` 避免出现[src="" 问题]
-* `<a>`标签缺省格式：`<a href="###" title="链接名称">xxx</>` 注：`target="_blank"` 根据需求决定  
-* `<a>`标签预留链接占位符使用`###`，参见：[a标签占位符问题]
-* 所有标签需要符合XHTML标准闭合
-* 一律统一标签结尾斜杠的书写形式：`<br />` `<hr />` 注意之间空格
-* 避免使用已过时标签，如：`<b>` `<u>` `<i>` 而用 `<strong>` `<em>`等代替
-* 使用`data-xxx`来添加自定义数据，如：`<input data-xxx="yyy"/>`
-* 避免使用`style="xxx:xxx;"`的内联样式表
-* 特殊符号使用参考[HTML 符号实体]
+/* bad */
+body {
+    padding: 0px 5px;
+}
+```
+#### 3.3.5 [强制] 颜色值可以缩写时，必须使用缩写形式。
 
-### 2.4 JS 细化规范
+示例：
 
-#### 2.4.1 JS 文件结构
+```css
+/* good */
+.success {
+    background-color: #aca;
+}
+
+/* bad */
+.success {
+    background-color: #aaccaa;
+}
+```
+
+#### 3.3.6 [强制] 颜色值不允许使用命名色值。
+
+示例：
+
+```css
+/* good */
+.success {
+    color: #90ee90;
+}
+
+/* bad */
+.success {
+    color: lightgreen;
+}
+```
+#### 3.3.7 [强制] 需要在 Windows 平台显示的中文内容，其字号应不小于 `12px`。
+
+#### 3.3.7 [强制] `font-weight` 属性必须使用数值方式描述。
+
+解释：
+
+CSS 的字重分 100 – 900 共九档，但目前受字体本身质量和浏览器的限制，实际上支持 400 和 700 两档，分别等价于关键词 normal 和 bold。
+
+浏览器本身使用一系列[启发式规则](http://www.w3.org/TR/CSS21/fonts.html#propdef-font-weight)来进行匹配，在 <700 时一般匹配字体的 Regular 字重，>=700 时匹配 Bold 字重。
+
+但已有浏览器开始支持 =600 时匹配 Semibold 字重 (见[此表](http://justineo.github.io/slideshows/font/#/3/15))，故使用数值描述增加了灵活性，也更简短。
+
+示例：
+
+```css
+/* good */
+h1 {
+    font-weight: 700;
+}
+
+/* bad */
+h1 {
+    font-weight: bold;
+}
+```
+
+#### 3.3.8 reset.css
+```
+html,body,h1,h2,h3,h4,h5,h6,hr,p,iframe,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td{margin:0;padding:0;}
+
+body,th,td,button,input,select,textarea{font:14px/1.6  "Microsoft YaHei",Arial,Tahoma, Helvetica,sans-serif; -webkit-font-smoothing:antialiased;-moz-font-smoothing:antialiased;resize: none;}
+
+html,body{*position:static;height:100%;width:100%; }
+
+html{font-family: sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}
+
+ul,ol,li,dl{list-style-type:none;}
+
+label{cursor:pointer;}
+
+fieldset,img {  border:0;}
+
+button,h1,h2,h3,h4,h5,h6,input,select,textarea{font-size:100%;}
+
+a{text-decoration:none;cursor:pointer;}
+a:hover,a:active,a:focus{text-decoration:none;outline:none;}
+
+img{border:0;vertical-align:middle;}
+
+i{ display: inline-block; font-style: normal; } 
+
+.fl{ float: left;}
+
+.fr{ float: right;}
+
+.clear{zoom:1;}
+
+.clear:after{content:'';display:block;clear:both;}
+
+i,s,b,em{ font-weight:normal;font-style:normal; }
+   
+textarea.resize{resize:both !important;}
+
+input { border-radius: 0;}
+
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit;}
+
+input,button{overflow: visible;vertical-align:middle;outline:none;}
+
+button,input[type="button"], input[type="submit"] {line-height:normal !important;cursor:pointer;}
+
+textarea,
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="text"]{-webkit-appearance: none;}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner,
+input[type="file"] > input[type="button"]::-moz-focus-inner { border: 0; padding: 0;}
+
+input[type=tel],
+input[type=text] {-webkit-tap-highlight-color: rgba(0,0,0,0);}
+
+input[type=button],
+input[type=reset],
+input[type=submit] {-webkit-appearance: none; border-radius: 0;}
+
+/* 去掉number输入框右边点击上下的小三角 */
+input::-webkit-inner-spin-button{ -webkit-appearance: none; } 
+input::-webkit-outer-spin-button{ -webkit-appearance: none; }
+
+/*placeholder 文字颜色设置*/
+input::-moz-placeholder,
+input::-ms-input-placeholder,
+input::-webkit-input-placeholder,
+textarea::-moz-placeholder,
+textarea::-ms-input-placeholder,
+textarea::-webkit-input-placeholder { color: #999; }
+
+/* Chrome浏览器会在输入控制聚集的时候添加一个蓝色的outline*/
+input:focus, textarea:focus, select:focus{ outline: none; }
+
+/* 去掉select的默认样式 */ 
+select{ -webkit-appearance: none; }
+ 
+/* 如果有输入内容IE会给输入框右边加一个大大的X */ 
+input::-ms-clear{ display: none; width: 0; height: 0; } 
+```
+
+
+## 4 JS规范
+
+### 4.1 JS 文件结构
     ---/js/
     |---- /libs/plugin-1/       使用到的js插件1  
     |---- /libs/plugin-2/       使用到的js插件2  
@@ -241,144 +385,347 @@ _如：以下2种顺序均可_
     |---- script.js             单独书写的js  
     |---- plugins.js            调用的plugins汇总  
     |---- jquery-1.9.x.min.js   调用jq库文件  
-
-* JS 换行缩进：采用 4 空格
-* 结束行需添加分号`;`
-* jQuery变量要求首字符为 `$`, 私有变量:首字符为`_`; 尽量避免全局变量.
-* 避免使用 eval()，setTimeOut使用调用函数，考虑重绘，回流 操作对页面影响  参看：[reflows，repaints]
-* JS调试使用`console.log()`及`console.dir()`进行，避免使用弹出框，线上版需要注释所有调试代码
-* JS压缩混淆工具: [JS Compressor]  如果使用了压缩，需要留 `name-src.js`在同路径供今后修改使用
-
-##### 2.4.2 jQuery Call
-    <!-- Grab Google CDN jQuery. fall back to local if necessary -->  
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>  
-    <script>!window.jQuery && document.write('<script src="js/jquery-1.7.2.min.js"><\/script>')</script>            
-##### 2.4.3 jQuery Plugin
-
-* IE对HTML5标签支持，以及浏览器特性检测：[Modernizr] & [html5shiv]
-* <del>IE6 PNG 图片支持：[DD_belatedPNG]</del>
-* 定制&统一 浏览器的滚动条样式：[jquery-scroll] & [Lionbars]
-* hover提示效果文字：[bootstrap-tooltips] & [tipsy]
-* 滚动条跟随nav效果：[bootstrap-scrollspy]
-* 提示冒泡文字：[grumble.js]
-* 导航栏过渡效果：[lavalamp]
-* 移动设备的滚动效果：[iscroll 4]
-* Mac OS Lion 风格的滚动条：[Lionbars]
-* 弹性SlideShow：[kwicks for jQuery]
-* 瀑布流：[isotope]
-* 抖动效果：[jQ shake]
-* LightBox：[fancyBox]
-* KenDo UI：[KenDo UI]
-* textarea自适应高度：[elastic]
-* 提示区域 & 提示层：[noty]
-* 浮动话题泡：[jQuery grumble]
-* 旋转进度：[jQuery Knob]
-
-##### 2.4.4 JSON格式规范  
-参考[JSON Style Guide翻译]，原版：[Google JSON Style Guide]
-
-### HTML 细化规范
-* HTML `head`部分的结构参看：[cool-head] \(摘取必要内容即可)
-* `css` 文件置于都 **头部**
-* `jQuery` 及 `Google Analytics`引用置于 **头部**
-* 其他效果`js`及`统计代码` 文件置于 **尾部**
-* HTML 代码尽量过一遍[HTML5 验证]
-* HTML 占位图片使用 [temp.im] & [placehold.us] 图片服务
-
-### 2.5 Responsive Web 规范
-从设计之处就坚持"[Mobile First]"的理念，在重构页面的时候要灵活采取响应式的解决方案。
-
-#### 2.5.1 响应式实现途径
-\* 设置 [meta viewport] 属性
-
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-\* 引入不同尺寸设备的样式表
-
-    <link rel="stylesheet" type="text/css" href="style.css" media="screen, handheld" />
-    <link rel="stylesheet" type="text/css" href="enhanced.css" media="screen  and (min-width: 40.5em)" />
-    <!--[if (lt IE 9)&(!IEMobile)]>
-    <link rel="stylesheet" type="text/css" href="enhanced.css" />
-    <![endif]-->
     
-\* 使用 [CSS Media Queries] 方法
 
-    @media screen and (max-width: 40.5em) {
-      .product-img {
-        width: auto;
-        float: none;
-      }
+### 4.2 JS 书写规范
+
+#### 4.2.1 [强制] 必须独占一行。// 后跟一个空格，缩进与下一行被注释说明的代码一致。
+
+#### 4.2.2 强制] 变量 使用 Camel命名法。
+示例：
+
+```javascript
+var loadingModules = {};
+```
+
+##### 4.2.3 [强制] `常量` 使用 `全部字母大写，单词间下划线分隔` 的命名方式。
+
+示例：
+
+```javascript
+var HTML_ENTITY = {};
+```
+
+##### 4.2.4 [强制] `函数` 使用 `Camel命名法`。
+
+示例：
+
+```javascript
+function stringFormat(source) {
+}
+```
+
+##### 4.2.5 [强制] 变量在使用前必须通过 `var` 定义。
+
+解释：
+
+不通过 var 定义变量将导致变量污染全局环境。
+
+
+示例：
+
+```javascript
+// good
+var name = 'MyName';
+
+// bad
+name = 'MyName';
+```
+##### 4.2.6 [强制] 每个 `var` 只能声明一个变量。
+
+解释：
+
+一个 var 声明多个变量，容易导致较长的行长度，并且在修改时容易造成逗号和分号的混淆。
+
+
+示例：
+
+```javascript
+// good
+var hangModules = [];
+var missModules = [];
+var visited = {};
+
+// bad
+var hangModules = [],
+    missModules = [],
+    visited = {};
+```    
+
+##### 4.2.7 [强制] 在 Equality Expression 中使用类型严格的 `===`。仅当判断 null 或 undefined 时，允许使用 `== null`。
+
+解释：
+
+使用 === 可以避免等于判断中隐式的类型转换。
+
+
+示例：
+
+```javascript
+// good
+if (age === 30) {
+    // ......
+}
+
+// bad
+if (age == 30) {
+    // ......
+}
+```
+
+#### 3.4.1 类型检测
+
+
+##### [建议] 类型检测优先使用 `typeof`。对象类型检测使用 `instanceof`。`null` 或 `undefined` 的检测使用 `== null`。
+
+示例：
+
+```javascript
+// string
+typeof variable === 'string'
+
+// number
+typeof variable === 'number'
+
+// boolean
+typeof variable === 'boolean'
+
+// Function
+typeof variable === 'function'
+
+// Object
+typeof variable === 'object'
+
+// RegExp
+variable instanceof RegExp
+
+// Array
+variable instanceof Array
+
+// null
+variable === null
+
+// null or undefined
+variable == null
+
+// undefined
+typeof variable === 'undefined'
+```
+
+
+#### 3.4.2 类型转换
+
+
+##### [建议] 转换成 `string` 时，使用 `+ ''`。
+
+示例：
+
+```javascript
+// good
+num + '';
+
+// bad
+new String(num);
+num.toString();
+String(num);
+```
+
+##### [建议] 转换成 `number` 时，通常使用 `+`。
+
+示例：
+
+```javascript
+// good
++str;
+
+// bad
+Number(str);
+```
+
+##### [建议] `string` 转换成 `number`，要转换的字符串结尾包含非数字并期望忽略时，使用 `parseInt`。
+
+示例：
+
+```javascript
+var width = '200px';
+parseInt(width, 10);
+```
+
+##### [强制] 使用 `parseInt` 时，必须指定进制。
+
+示例：
+
+```javascript
+// good
+parseInt(str, 10);
+
+// bad
+parseInt(str);
+```
+
+##### [建议] 转换成 `boolean` 时，使用 `!!`。
+
+示例：
+
+```javascript
+var num = 3.14;
+!!num;
+```
+
+##### [建议] `number` 去除小数点，使用 `Math.floor / Math.round / Math.ceil`，不使用 `parseInt`。
+
+示例：
+
+```javascript
+// good
+var num = 3.14;
+Math.ceil(num);
+
+// bad
+var num = 3.14;
+parseInt(num, 10);
+```
+
+### 3.4.3 对象
+
+
+##### [强制] 使用对象字面量 `{}` 创建新 `Object`。
+
+示例： 
+
+```javascript
+// good
+var obj = {};
+
+// bad
+var obj = new Object();
+```
+
+##### [强制] 对象创建时，如果一个对象的所有 `属性` 均可以不添加引号，则所有 `属性` 不得添加引号。
+
+示例： 
+
+```javascript
+var info = {
+    name: 'someone',
+    age: 28
+};
+```
+
+##### [强制] 对象创建时，如果任何一个 `属性` 需要添加引号，则所有 `属性` 必须添加 `'`。
+
+解释：
+
+如果属性不符合 Identifier 和 NumberLiteral 的形式，就需要以 StringLiteral 的形式提供。
+
+
+示例： 
+
+```javascript
+// good
+var info = {
+    'name': 'someone',
+    'age': 28,
+    'more-info': '...'
+};
+
+// bad
+var info = {
+    name: 'someone',
+    age: 28,
+    'more-info': '...'
+};
+```
+
+##### [建议] `for in` 遍历对象时, 使用 `hasOwnProperty` 过滤掉原型中的属性。
+
+示例：
+
+```javascript
+var newInfo = {};
+for (var key in info) {
+    if (info.hasOwnProperty(key)) {
+        newInfo[key] = info[key];
     }
-    @media screen and (max-width: 480px) {
-    }
+}
+```
+### 3.4.4 数组
+
+
+##### [强制] 使用数组字面量 `[]` 创建新数组，除非想要创建的是指定长度的数组。
+
+示例：
+
+```javascript
+// good
+var arr = [];
+
+// bad
+var arr = new Array();
+```
+
+##### [强制] 遍历数组不使用 `for in`。
+
+解释：
+
+数组对象可能存在数字以外的属性, 这种情况下 for in 不会得到正确结果.
+
+示例：
+
+```javascript
+var arr = ['a', 'b', 'c'];
+arr.other = 'other things'; // 这里仅作演示, 实际中应使用Object类型
+
+// 正确的遍历方式
+for (var i = 0, len = arr.length; i < len; i++) {
+    console.log(i);
+}
+
+// 错误的遍历方式
+for (i in arr) {
+    console.log(i);
+}
+```
+
+##### [建议] 不因为性能的原因自己实现数组排序功能，尽量使用数组的 `sort` 方法。
+
+解释：
+
+自己实现的常规排序算法，在性能上并不优于数组默认的 sort 方法。以下两种场景可以自己实现排序：
+
+1. 需要稳定的排序算法，达到严格一致的排序结果。
+2. 数据特点鲜明，适合使用桶排。
+
+##### [建议] 清空数组使用 `.length = 0`。    
     
-\* JS控制导航栏在 [resize 事件] 触发后的可见性，如：
+#### 3.4.5 DOM 操作
 
-    $(w).resize(function(){ //Update dimensions on resize
-      sw = document.documentElement.clientWidth;
-      sh = document.documentElement.clientHeight;
-      checkMobile();
-    });
-    //Check if Mobile
-    function checkMobile() {
-      mobile = (sw > breakpoint) ? false : true;
-      if (!mobile) { //If Not Mobile
-        $('[role="tabpanel"],#nav,#search').show(); //Show full navigation and search
-      } else { //Hide 
-        if(!$('#nav-anchors a').hasClass('active')) {
-          $('#nav,#search').hide(); //Hide full navigation and search
-        }
-      }
-    }
+
+##### [建议] 操作 `DOM` 时，尽量减少页面 `reflow`。
+
+解释：
+
+页面 reflow 是非常耗时的行为，非常容易导致性能瓶颈。下面一些场景会触发浏览器的reflow：
+
+- DOM元素的添加、修改（内容）、删除。
+- 应用新的样式或者修改任何影响元素布局的属性。
+- Resize浏览器窗口、滚动页面。
+- 读取元素的某些属性（offsetLeft、offsetTop、offsetHeight、offsetWidth、scrollTop/Left/Width/Height、clientTop/Left/Width/Height、getComputedStyle()、currentStyle(in IE)) 。
+
+
+##### [建议] 尽量减少 `DOM` 操作。
+
+解释：
+
+DOM 操作也是非常耗时的一种操作，减少 DOM 操作有助于提高性能。举一个简单的例子，构建一个列表。我们可以用两种方式：
+
+1. 在循环体中 createElement 并 append 到父元素中。
+2. 在循环体中拼接 HTML 字符串，循环结束后写父元素的 innerHTML。
+
+第一种方法看起来比较标准，但是每次循环都会对 DOM 进行操作，性能极低。在这里推荐使用第二种方法。    
     
-#### 2.5.2 响应式解决方案
-\* 弹性图片
-
-    img {
-      max-width: 100%;
-      height: auto;
-      width: auto\9; /* ie8 */
-    }
-
-\* 自适应嵌入媒体
-
-    .video embed, .video object, .video iframe {
-      width: 100%;
-      height: auto;
-    }
-
-\* 禁用iPhone字体自适应功能：
-
-    html {
-      -webkit-text-size-adjust: none;
-    }
-
-\* 让 IE 9 以下的IE版本支持响应式：
-
-    <!--[if lt IE 9]>
-      <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
-    <![endif]-->
-
-### 2.6 Newletter 制作规范
-* `CSS`只可使用 **内联样式表** ，如：`style="margin:0;"`
-* 设计之初遵循： **图上无文本，文本后无底纹** 的规则
-* 使用 `MailChimp HTML Email CSS Fix` 参看下文链接
-* 引入 `CSS Reset for HTML Email` 参看下文链接
-* 使用`Table`布局而非`DIV`
-* 所有图片使用`IMG`标签，如：`<img style="style="display:block" "src="" />`
-* 可以适当使用占位符`spacer.gif`
-* 多用`<br />`换行而非`<p>`
-* 整体最佳宽度为：`550-600px`
-* 不使用`Javascript`
-* 正式发送给用户之前，多次测试
-
-更多细节参考下面链接：  
-[12 Killer Tips and Tricks for Building HTML Email]  
-[Coding HTML Newsletters (EDM)]
-
-### 2.7 生产力工具推荐
-#### 2.7.1 for Mac OS
-*for more app detial check -> [IUSETHIS](http://osx.iusethis.com/user/hzlzh 'App pack')*  
+    
+  
 ##### 2.7.1.1 前端相关工具(Mac)
 
 * 编辑器：[Sublime Text 2] / [TextMate 2] / [Vim] / [Intellij IDEA]
@@ -444,215 +791,6 @@ _如：以下2种顺序均可_
 * [关于Mac Win Linux跨系统传文件，文件名乱码的解决方案]  
 * [技术团队"路由代理"解决方案和使用须知]
 
-### 2.9 参考数据
-涉及到 `设计`->`重构`->`兼容性`->`测试` 时可参考各浏览器的占用情况  
-*-- updated: `2013/02 - 2013/04`*  via `Google Analytics of GeekPark`  
-
-
-<table>
-<tbody valign="top"><tr>
-<th align="center">总浏览器分布</th>
-<th align="center">IE版本分布</th>
-<th align="center">移动设备分布</th>
-<th align="center">屏幕解决方案</th>
-</tr>
-<tr>
-<td align="left">
-
-<table>
-<tbody><tr>
-<th align="left">类别</th>
-<th align="right">占有率</th>
-</tr>
-<tr>
-<td align="left">Chrome</td>
-<td align="right">40.39%</td>
-</tr>
-<tr>
-<td align="left">Internet Explorer</td>
-<td align="right">24.86%</td>
-</tr>
-<tr>
-<td align="left">Safari & Safari (in-app)</td>
-<td align="right">16.05%</td>
-</tr>
-<tr>
-<td align="left">Android Browser</td>
-<td align="right">10.57%</td>
-</tr>
-<tr>
-<td align="left">Firefox</td>
-<td align="right">5.99%</td>
-</tr>
-<tr>
-<td align="left">Opera</td>
-<td align="right">0.69%</td>
-</tr>
-<tr>
-<td align="left">Opera Mini</td>
-<td align="right">0.37%</td>
-</tr>
-<tr>
-<td align="left">Mozilla Compatible Agent</td>
-<td align="right">0.14%</td>
-</tr>
-<tr>
-<td align="left">Maxthon</td>
-<td align="right">0.13%</td>
-</tr>
-</tbody></table>
-</td>
-<td align="right">  
-
-<table>
-<tbody><tr>
-<th align="left">版本号</th>
-<th align="right">占有率</th>
-</tr>
-<tr>
-<td align="left">IE 8</td>
-<td align="right">60.97%</td>
-</tr>
-<tr>
-<td align="left">IE 9</td>
-<td align="right">17.11%</td>
-</tr>
-<tr>
-<td align="left"><em>IE 7</em></td>
-<td align="right">8.39%</td>
-</tr>
-<tr>
-<td align="left"><em>IE 6</em></td>
-<td align="right">7.63%</td>
-</tr>
-<tr>
-<td align="left">IE 10</td>
-<td align="right">5.87%</td>
-</tr>
-<tr>
-<td align="left">IE 4</td>
-<td align="right">0.02%</td>
-</tr>
-
-</tbody></table>
-</td>
-<td align="right">
-
-<table>
-<tbody><tr>
-<th align="left">移动平台</th>
-<th align="right">占有率</th>
-</tr>
-<tr>
-<td align="left">iOS</td>
-<td align="right">50.39%</td>
-</tr>
-<tr>
-<td align="left">Android</td>
-<td align="right">48.05%</td>
-</tr>
-<tr>
-<td align="left">Windows Phone</td>
-<td align="right">0.96%</td>
-</tr>
-<tr>
-<td align="left">Nokia</td>
-<td align="right">0.33%</td>
-</tr>
-</tbody></table>
-</td>
-<td align="right">
-<table>
-<tbody><tr>
-<th align="left">PC & Mac屏幕分辨率</th>
-<th align="right">占有率</th>
-</tr>
-<tr>
-<td align="left">1366x768</td>
-<td align="right">21.55%</td>
-</tr>
-<tr>
-<td align="left">1440x900</td>
-<td align="right">12.70%</td>
-</tr>
-<tr>
-<td align="left">1280x800</td>
-<td align="right">9.60%</td>
-</tr>
-<tr>
-<td align="left">1280x1024</td>
-<td align="right">6.68%</td>
-</tr>
-<tr>
-<td align="left">320x480</td>
-<td align="right">6.38%</td>
-</tr>
-<tr>
-<td align="left">1920x1080</td>
-<td align="right">6.27%</td>
-</tr>
-</tbody></table>
-</td>
-</tr>
-</tbody></table>
-
-
-### 使用团队
-
-
-
-
-此规范基于 [MIT License] 开源，持续更新维护中，可 `Star` 或 `Fork` 本项来形成你的规范，请以 [创建[issues]](https://github.com/hzlzh/GeekPark-FrontEnd-Standard/issues/new) 的方式反馈，或发起`Pull Request` 
-
-[reflows，repaints]: http://www.zhangxinxu.com/wordpress/2010/01/%E5%9B%9E%E6%B5%81%E4%B8%8E%E9%87%8D%E7%BB%98%EF%BC%9Acss%E6%80%A7%E8%83%BD%E8%AE%A9javascript%E5%8F%98%E6%85%A2%EF%BC%9F/  "重绘,回流参考"
-[src="" 问题]: http://js8.in/555.html "src="" 问题"
-[a标签占位符问题]: http://www.v2ex.com/t/48511/ "a标签占位符问题"
-
-[匈牙利命名法]: http://zh.wikipedia.org/wiki/%E5%8C%88%E7%89%99%E5%88%A9%E5%91%BD%E5%90%8D%E6%B3%95 "Wiki:匈牙利命名法"
-[小駝峰式命名法]:http://zh.wikipedia.org/wiki/%E9%A7%9D%E5%B3%B0%E5%BC%8F%E5%A4%A7%E5%B0%8F%E5%AF%AB "小駝峰式命名法"
-[CSS Compressor]: http://www.csscompressor.com/ "CSS 压缩"
-[JS Compressor]: http://javascriptcompressor.com/ "JS 压缩和混淆"
-[HTML 符号实体]: http://www.w3school.com.cn/html/html_entities.asp 
-[Google JSON Style Guide]:http://google-styleguide.googlecode.com/svn/trunk/jsoncstyleguide.xml
-[JSON Style Guide翻译]:https://github.com/darcyliu/google-styleguide/blob/master/JSONStyleGuide.md
-[meta viewport]: https://developer.mozilla.org/en-US/docs/Mobile/Viewport_meta_tag "<meta> ViewPort"
-[CSS Media Queries]: http://css-tricks.com/css-media-queries/
-[resize 事件]: http://api.jquery.com/resize/
-
-[Lesselements]: http://lesselements.com/
-[Bootstrap]: http://twitter.github.com/bootstrap/ "Bootstrap, from Twitter"
-[reset.css]: https://github.com/hzlzh/cool-head/blob/master/Template/css/libs/reset.css "CSS reset 文件"
-[reset.less]: https://github.com/hzlzh/cool-head/blob/master/Template/css/libs/reset.less "reset.less from HTML5 Boilerplate"
-[elements.less]: https://github.com/hzlzh/cool-head/blob/master/Template/css/libs/elements.less "elements.less from lesselements"
-[HTML5 验证]: http://html5.validator.nu/
-
-[Modernizr]: http://modernizr.com/download/
-[DD_belatedPNG]: http://www.dillerdesign.com/experiment/DD_belatedPNG/
-[html5shiv]: https://github.com/aFarkas/html5shiv
-[jquery-scroll]: https://github.com/thomd/jquery-scroll/
-[Lionbars]: https://github.com/Charuru/lionbars
-[bootstrap-tooltips]: http://twitter.github.com/bootstrap/javascript.html#tooltips
-[bootstrap-scrollspy]: http://twitter.github.com/bootstrap/javascript.html#scrollspy
-[grumble.js]: https://github.com/jamescryer/grumble.js
-[lavalamp]: http://www.gmarwaha.com/blog/2007/08/23/lavalamp-for-jquery-lovers/
-[iscroll 4]: https://github.com/cubiq/iscroll
-[kwicks for jQuery]: https://github.com/Mottie/Kwicks
-[isotope]: https://github.com/desandro/isotope
-[jQ shake]: https://gist.github.com/3270711
-[fancyBox]: https://github.com/fancyapps/fancyBox
-[KenDo UI]: http://www.kendoui.com/purchase.aspx
-[elastic]: http://unwrongest.com/projects/elastic/
-[cool-head]: https://github.com/hzlzh/cool-head
-[noty]: https://github.com/needim/noty
-[jQuery grumble]: https://github.com/jamescryer/grumble.js
-[tipsy]: https://github.com/jaz303/tipsy
-[jQuery Knob]: https://github.com/aterrien/jQuery-Knob
-
-[各浏览器的缓存清除方法]: https://github.com/GeekPark/Doc/wiki/%5B%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D%E7%BC%93%E5%AD%98%5D%E5%90%84%E6%B5%8F%E8%A7%88%E5%99%A8%E6%B5%8B%E8%AF%95%E7%BD%91%E9%A1%B5%E6%97%B6%E6%B8%85%E9%99%A4%E7%BC%93%E5%AD%98%E7%9A%84%E6%96%B9%E6%B3%95
-[测试技巧Gmail 添加词缀 .+ 获得多个邮件的方法]: https://github.com/GeekPark/Doc/wiki/%5B%E6%B5%8B%E8%AF%95%E6%8A%80%E5%B7%A7%5DGmail-%E6%B7%BB%E5%8A%A0%E8%AF%8D%E7%BC%80(.--)%E8%8E%B7%E5%BE%97%E5%A4%9A%E4%B8%AA%E9%82%AE%E4%BB%B6%E7%9A%84%E6%96%B9%E6%B3%95
-[关于Mac Win Linux跨系统传文件，文件名乱码的解决方案]: https://github.com/GeekPark/Doc/wiki/%E5%85%B3%E4%BA%8E%5BMac%5D-%5BWin%5D-%5BLinux%5D%E8%B7%A8%E7%B3%BB%E7%BB%9F%E4%BC%A0%E6%96%87%E4%BB%B6%EF%BC%8C%E6%96%87%E4%BB%B6%E5%90%8D%E4%B9%B1%E7%A0%81%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88
-[技术团队"路由代理"解决方案和使用须知]: https://github.com/GeekPark/Doc/wiki/%E6%8A%80%E6%9C%AF%E5%9B%A2%E9%98%9F%5B%E8%B7%AF%E7%94%B1%E4%BB%A3%E7%90%86%5D%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88%E5%92%8C%E4%BD%BF%E7%94%A8%E9%A1%BB%E7%9F%A5
-[Mobile First]: http://www.lukew.com/ff/entry.asp?933 "Mobile First"
 
 
 [Sublime Text 2]:http://www.sublimetext.com/2

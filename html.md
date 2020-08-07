@@ -3,49 +3,6 @@
 
 
 
-
-[1 代码风格](#1-%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC)
-
-　　[1.1 缩进与换行](#11-%E7%BC%A9%E8%BF%9B%E4%B8%8E%E6%8D%A2%E8%A1%8C)
-
-　　[1.2 命名](#12-%E5%91%BD%E5%90%8D)
-
-　　[1.3 标签](#13-%E6%A0%87%E7%AD%BE)
-
-　　[1.4 属性](#14-%E5%B1%9E%E6%80%A7)
-
-　　[1.5 属性顺序](#15-属性顺序)
-
-
-[2 通用](#3-%E9%80%9A%E7%94%A8)
-
-　　[2.1 DOCTYPE](#21-doctype)
-
-　　[2.2 编码](#22-%E7%BC%96%E7%A0%81)
-
-　　[2.3 CSS和JavaScript引入](#23-css%E5%92%8Cjavascript%E5%BC%95%E5%85%A5)
-
-[3 head](#4-head)
-
-　　[3.1 title](#31-title)
-
-　　[3.2 favicon](#32-favicon)
-
-　　[3.3 viewport](#33-viewport)
-
-[4 图片](#4-%E5%9B%BE%E7%89%87)
-
-[5 表单](#5-%E8%A1%A8%E5%8D%95)
-
-　　[5.1 控件标题](#51-%E6%8E%A7%E4%BB%B6%E6%A0%87%E9%A2%98)
-
-　　[5.2 按钮](#52-%E6%8C%89%E9%92%AE)
-
-[6 多媒体](#6-%E5%A4%9A%E5%AA%92%E4%BD%93)
-
-
-
-
 ## 1 代码风格
 
 
@@ -89,58 +46,8 @@
 #### [建议] `id` 建议单词全字母小写，单词间以 `_` 分隔。同项目必须保持风格一致。
 
 
-#### [强制] 禁止为了 `hook 脚本`，创建无样式信息的 `class`。
-
-解释：
-
-不允许 class 只用于让 JavaScript 选择某些元素，class 应该具有明确的语义和样式。否则容易导致 css class 泛滥。
-
-使用 id、属性选择作为 hook 是更好的方式。
-
-
-#### [强制] 同一页面，应避免使用相同的 `name` 与 `id`。
-
-解释：
-
-IE 浏览器会混淆元素的 id 和 name 属性， document.getElementById 可能获得不期望的元素。所以在对元素的 id 与 name 属性的命名需要非常小心。
-
-一个比较好的实践是，为 id 和 name 使用不同的命名法。
-
-示例：
-
-```html
-<input name="foo">
-<div id="foo"></div>
-<script>
-// IE6 将显示 INPUT
-alert(document.getElementById('foo').tagName);
-</script>
-````
-
-
 ### 1.3 标签
 
-###  [强制] 在JS文件中生成标签让内容变得更难查找，更难编辑，性能更差。应该尽量避免这种情况的出现。
-
-#### [强制] 标签名必须使用小写字母。
-
-
-#### [强制] 对于无需自闭合的标签，不允许自闭合。
-
-解释：
-
-常见无需自闭合标签有input、br、img、hr等。
-
-
-示例：
-
-```html
-<!-- good -->
-<input type="text" name="title">
-
-<!-- bad -->
-<input type="text" name="title" />
-```
 
 #### [强制] 对 `HTML5` 中规定允许省略的闭合标签，不允许省略闭合标签。
 
@@ -173,33 +80,6 @@ alert(document.getElementById('foo').tagName);
 - ol - 有序列表
 - dl,dt,dd - 定义列表
 
-
-示例：
-
-```html
-<!-- good -->
-<p>Esprima serves as an important <strong>building block</strong> for some JavaScript language tools.</p>
-
-<!-- bad -->
-<div>Esprima serves as an important <span class="strong">building block</span> for some JavaScript language tools.</div>
-```
-
-
-#### [建议] 在 `CSS` 可以实现相同需求的情况下不得使用表格进行布局。
-
-#### [建议] 标签的使用应尽量简洁，减少不必要的标签。
-
-示例：
-
-```html
-<!-- good -->
-<img class="avatar" src="image.png">
-
-<!-- bad -->
-<span class="avatar">
-    <img src="image.png">
-</span>
-```
 
 
 
@@ -250,32 +130,6 @@ alert(document.getElementById('foo').tagName);
 <ol data-ui-type="Select"></ol>
 ```
 
-### 1.5 属性顺序
-
-#### [建议] 属性应该按照特定的顺序出现以保证易读性。
-
-- p - 段落
-- h1,h2,h3,h4,h5,h6 - 层级标题
-- strong,em - 强调
-- ins - 插入
-- del - 删除
-- abbr - 缩写
-- code - 代码标识
-- cite - 引述来源作品的标题
-- q - 引用
-- blockquote - 一段或长篇引用
-- ul - 无序列表
-- ol - 有序列表
-- dl,dt,dd - 定义列表
-1. class是为高可复用组件设计的，所以应处在第一位。
-2. id更加具体且应该尽量少使用，所以将它放在第二位。
-
-示例：
-
-```html
-    <input class="form-control" type="text">
-	<img class="avatar" src="image.png">
-```
 
 ## 2 通用
 
@@ -526,101 +380,4 @@ button 元素的默认 type 为 submit，如果被置于 form 元素中，点击
 <button type="submit">提交</button>
 <button type="button">取消</button>
 ```
-
-#### [建议] 尽量不要使用按钮类元素的 `name` 属性。
-
-解释：
-
-由于浏览器兼容性问题，使用按钮的 name 属性会带来许多难以发现的问题。具体情况可参考[此文](http://w3help.org/zh-cn/causes/CM2001)。
-
-
-
-
-#### [建议] 当使用 `JavaScript` 进行表单提交时，如果条件允许，应使原生提交功能正常工作。
-
-解释：
-
-当浏览器 JS 运行错误或关闭 JS 时，提交功能将无法工作。如果正确指定了 form 元素的 action 属性和表单控件的 name 属性时，提交仍可继续进行。
-
-
-示例：
-
-```html
-<form action="/login" method="post">
-    <p><input name="username" type="text" placeholder="用户名"></p>
-    <p><input name="password" type="password" placeholder="密码"></p>
-</form>
-```
-
-#### [建议] 在针对移动设备开发的页面时，根据内容类型指定输入框的 `type` 属性。
-
-解释：
-
-根据内容类型指定输入框类型，能获得能友好的输入体验。
-
-
-示例：
-
-```html
-<input type="date">
-```
-
-
-## 6 多媒体
-
-
-
-#### [建议] 当在现代浏览器中使用 `audio` 以及 `video` 标签来播放音频、视频时，应当注意格式。
-
-解释：
-
-音频应尽可能覆盖到如下格式：
-
-* MP3
-* WAV
-* Ogg
-
-视频应尽可能覆盖到如下格式：
-
-* MP4
-* WebM
-* Ogg
-
-#### [建议] 在支持 `HTML5` 的浏览器中优先使用 `audio` 和 `video` 标签来定义音视频元素。
-
-#### [建议] 使用退化到插件的方式来对多浏览器进行支持。
-
-示例：
-
-```html
-<audio controls>
-    <source src="audio.mp3" type="audio/mpeg">
-    <source src="audio.ogg" type="audio/ogg">
-    <object width="100" height="50" data="audio.mp3">
-        <embed width="100" height="50" src="audio.swf">
-    </object>
-</audio>
-
-<video width="100" height="50" controls>
-    <source src="video.mp4" type="video/mp4">
-    <source src="video.ogg" type="video/ogg">
-    <object width="100" height="50" data="video.mp4">
-        <embed width="100" height="50" src="video.swf">
-    </object>
-</video>
-```
-
-#### [建议] 只在必要的时候开启音视频的自动播放。
-
-
-#### [建议] 在 `object` 标签内部提供指示浏览器不支持该标签的说明。
-
-示例：
-
-```html
-<object width="100" height="50" data="something.swf">DO NOT SUPPORT THIS TAG</object>
-```
-
-
-
 

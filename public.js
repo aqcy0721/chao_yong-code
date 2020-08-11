@@ -41,7 +41,7 @@ function thym2(ym) {
         .toLowerCase();
 }
 /**
- * 获取域名的前缀
+ * 获取域名的后缀
  * chao.yong 2020/08/11
  * @param {String} ym 域名
  */
@@ -50,7 +50,7 @@ function getSuffix(ym) {
 }
 
 /**
- * 获取域名的后缀
+ * 获取域名的前缀
  * chao.yong 2020/08/11
  * @param {String} ym 域名
  */

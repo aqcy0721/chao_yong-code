@@ -22,19 +22,42 @@ function isym(str) {
     var hm = str.substr(str.indexOf("\."));
     return str.length > 0 && in_array(hm, hz) >= 0 && qm.match(/^[a-z0-9\u4e00-\u9fa5]+([a-z0-9\u4e00-\u9fa5-]*(?:[a-z0-9\u4e00-\u9fa5]+))?$/i) ? true : false;
 }
-
-//.替换为/
+/**
+ * .替换为/
+ * chao.yong 2020/08/11
+ * @param {String} ym 要替换的域名
+ */
 function thym(ym) {
     return ym.replace(/\./g, "/")
         .toLowerCase();
 }
-
-//替换.为_
+/**
+ * 替换.为_
+ * chao.yong 2020/08/11
+ * @param {String} ym 要替换的域名
+ */
 function thym2(ym) {
     return ym.replace(/\./g, "_")
         .toLowerCase();
 }
+/**
+ * 获取域名的前缀
+ * chao.yong 2020/08/11
+ * @param {String} ym 域名
+ */
+function getSuffix(ym) {
+    return ym.replace(/.+\./, ".");
+}
 
+/**
+ * 获取域名的后缀
+ * chao.yong 2020/08/11
+ * @param {String} ym 域名
+ */
+function getDomainPrefix(ym) { 
+  var reg = this.getSuffix(ym);
+  var re = new RegExp(reg, "g")
+  return ym.replace(re, '');
 
 /**
  * 域名格式化

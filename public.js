@@ -20,7 +20,7 @@ function isym(str) {
     hz = hz.split(",");
     var qm = str.substr(0, str.indexOf("\."));
     var hm = str.substr(str.indexOf("\."));
-    return str.length > 0 && $.inArray(hm, hz) >= 0 && qm.match(/^[a-z0-9\u4e00-\u9fa5]+([a-z0-9\u4e00-\u9fa5-]*(?:[a-z0-9\u4e00-\u9fa5]+))?$/i) ? true : false;
+    return str.length > 0 && in_array(hm, hz) >= 0 && qm.match(/^[a-z0-9\u4e00-\u9fa5]+([a-z0-9\u4e00-\u9fa5-]*(?:[a-z0-9\u4e00-\u9fa5]+))?$/i) ? true : false;
 }
 
 //.替换为/
@@ -175,6 +175,20 @@ function serlizeTime(seconds) {
     var d = date.getDate();
     d = d < 10 ? ('0' + d) : d;
     return y + '-' + m + '-' + d
+}
+/**
+ * 同$.inArray()
+ * chao.yong 2020/08/11
+ * @param {String} seconds 检索的项
+ * @param {Array} seconds 数组
+ */
+function in_array(search,array){
+  for(var i in array){
+    if(array[i]==search){
+      return true;
+    }
+  }
+  return false;
 }
 
 /**

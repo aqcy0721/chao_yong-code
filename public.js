@@ -55,7 +55,7 @@ function getSuffix(ym) {
  * @param {String} ym 域名
  */
 function getDomainPrefix(ym) { 
-  var reg = this.getSuffix(ym);
+  var reg = getSuffix(ym);
   var re = new RegExp(reg, "g")
   return ym.replace(re, '');
 

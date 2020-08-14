@@ -146,6 +146,23 @@ function chunk(arr, size) {
     }
     return result;
 }
+/**
+ * 数组去重
+ * chao.yong 2020/08/14
+ * @param {Array} arr 要去重的数组
+ */
+function unique(arr) {
+    var hash = {},
+        output = [],
+        len = arr.length;
+    for (var i = 0; i < len; i++) {
+        if (!hash[arr[i]]) {
+            output.push(arr[i]);
+            hash[arr[i]] = true;
+        }
+    }
+    return output;
+}
 
 
 /************** 对象处理函数 **************/

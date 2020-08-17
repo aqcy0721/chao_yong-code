@@ -58,7 +58,7 @@ function getDomainPrefix(ym) {
   var reg = getSuffix(ym);
   var re = new RegExp(reg, "g")
   return ym.replace(re, '');
-
+}
 /**
  * 域名格式化
  * chao.yong 2020/08/09
